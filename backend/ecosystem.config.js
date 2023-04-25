@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "api",
+      name: "backend",
       script: "./dist/app.js",
     },
   ],
@@ -12,8 +12,7 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:denis-ttk-1975/web-plus-pm2-deploy.git",
       path: "/home/ddduuu1975/web-plus-pm2-deploy",
-      "post-deploy":
-        "cd /home/ddduuu1975/web-plus-pm2-deploy/source/backend/ && npm i && npm run build",
+      "post-deploy": "cd backend && npm i && npm run build",
     },
   },
 };
