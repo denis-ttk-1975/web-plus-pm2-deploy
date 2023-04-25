@@ -13,7 +13,7 @@ module.exports = {
       repo: "https://github.com/denis-ttk-1975/web-plus-pm2-deploy",
       path: "/home/ddduuu1975/web-plus-pm2-deploy",
       "post-deploy":
-        "cd backend && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
+        "touch METKA.FILE && cd backend && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
     },
   },
 };
