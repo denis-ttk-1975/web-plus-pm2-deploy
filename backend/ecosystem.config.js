@@ -17,7 +17,7 @@ module.exports = {
   ],
   deploy: {
     production: {
-      user: "ddduuu1975",
+      user: DEPLOY_USER,
       host: "84.201.165.117",
       ref: "origin/master",
       repo: "git@github.com:denis-ttk-1975/web-plus-pm2-deploy.git",
