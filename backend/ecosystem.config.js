@@ -1,3 +1,13 @@
+require("dotenv").config({ path: ".env.deploy" });
+
+const {
+  DEPLOY_USER,
+  DEPLOY_HOST,
+  DEPLOY_PATH,
+  DEPLOY_REF = "origin/master",
+  DEPLOY_REPO,
+} = process.env;
+
 module.exports = {
   apps: [
     {
@@ -12,6 +22,7 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:denis-ttk-1975/web-plus-pm2-deploy.git",
       path: "/home/ddduuu1975/web-plus-pm2-deploy/backend",
+      "pre-deploy-local": `scp ./.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       "post-deploy":
         "touch METKA.FILE && cd backend && touch METKA1.FILE1 && npm i && npm run build && pm2 startOrRestart ecosystem.config.js",
     },
