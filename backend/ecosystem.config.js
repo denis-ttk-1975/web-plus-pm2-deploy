@@ -24,7 +24,7 @@ module.exports = {
       path: DEPLOY_PATH,
       "pre-deploy-local": `scp ./.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       "post-deploy":
-        "touch METKA.FILE && cd backend && touch METKA1.FILE1 && npm i && npm run build && pm2 startOrRestart ecosystem.config.js",
+        "touch METKA.FILE && cd backend && touch METKA1.FILE1 && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
     },
   },
 };
