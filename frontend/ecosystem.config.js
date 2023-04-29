@@ -12,8 +12,7 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:denis-ttk-1975/web-plus-pm2-deploy.git",
       path: "/home/ddduuu1975/web-plus-pm2-deploy/frontend",
-      "post-deploy":
-        "cd /home/ddduuu1975/web-plus-pm2-deploy/frontend && npm i && npm run build",
+      "post-deploy": "cd frontend && npm i && npm run build",
     },
   },
 };
