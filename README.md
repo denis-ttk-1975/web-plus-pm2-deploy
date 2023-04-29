@@ -7,5 +7,7 @@
 Автоматизация сделана
 
 IP адрес: 84.201.165.117
-Frontend: http://ulesovd.students.nomoredomains.monster/
-Backend: https://api.ulesovd.students.nomoredomains.monster//
+
+Frontend: https://ulesovd.students.nomoredomains.monster/
+
+Backend: https://api.ulesovd.students.nomoredomains.monster/
